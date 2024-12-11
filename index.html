@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AntiDoping Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Bootstrap JS and Popper.js (required for navbar toggle) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Add Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <span>AntiDoping</span>
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Testing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Resources</a>
+                    </li>
+                </ul>
+                
+                <!-- Move login button to navbar-nav on mobile -->
+                <div class="d-lg-none w-100 mt-3">
+                    <button class="btn btn-primary rounded-pill px-4 w-100">
+                        Login <i class="bi bi-arrow-right ms-2"></i>
+                    </button>
+                </div>
+                
+                <!-- Show login button only on desktop -->
+                <div class="d-none d-lg-block">
+                    <button class="btn btn-primary rounded-pill px-4">
+                        Login <i class="bi bi-arrow-right ms-2"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <div class="video">
+            <div class="video-container position-relative" style="height: 100vh;">
+                <!-- Video Background -->
+                <video class="w-100 h-100 object-fit-cover position-absolute top-0 start-0" autoplay muted loop>
+                    <source src="./Assets/WhatsApp Video 2024-12-11 at 3.20.49 PM.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                
+                <!-- Overlay with Content -->
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center" 
+                     style="background: rgba(0, 0, 0, 0.5);">
+                    <div class="text-center text-white">
+                        <h1 class="display-2 fw-bold mb-4">Protecting Clean Sport</h1>
+                        <p class="lead mb-4">Ensuring fair competition through rigorous testing and education</p>
+                        <button class="btn btn-primary btn-lg rounded-pill px-5">
+                            Learn More <i class="bi bi-arrow-right ms-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section1">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <!-- Left content -->
+                        <div class="left-content">
+                            <h1>Championing Clean Sport and Fair Competition</h1>
+                            <p>Join our mission to protect the integrity of sports through education, testing, and athlete support. Together, we create a level playing field for all athletes.</p>
+                            <div class="button-group">
+                                <button class="btn btn-outline-primary">Explore Services</button>
+                                <button class="btn btn-primary">Get Started <i class="bi bi-arrow-right"></i></button>
+                            </div>
+                            <div class="trust-info">
+                                <img src="https://cdn.prod.website-files.com/6365d860c7b7a7191055eb8a/65a752b0fec11d8c4c9beaf7_Olivia%20Rhye-p-500.jpg" alt="Avatar 1" class="avatar">
+                                <img src="https://cdn.prod.website-files.com/6365d860c7b7a7191055eb8a/65a752c0767a906d4eb8ae7a_Orlando%20Diggs-p-500.jpg" alt="Avatar 2" class="avatar">
+                                <img src="https://cdn.prod.website-files.com/6365d860c7b7a7191055eb8a/65a751cf3f6e8c895132ef81_Lyle%20Kauffman-p-500.jpg" alt="Avatar 3" class="avatar">
+                                <img src="https://cdn.prod.website-files.com/6365d860c7b7a7191055eb8a/65a75022decb088f60f09558_Fleur%20Cook-p-500.jpg" alt="Avatar 4" class="avatar">
+                                <span>50K+ Athletes Trust Us</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <!-- Right content -->
+                        <div class="right-content">
+                            <img src="https://plus.unsplash.com/premium_photo-1719682675509-635d9abd2baa?q=80&w=1934&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Anti-Doping Initiative" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section2">
+            <div class="container text-center py-5" style="height: 40vh;">
+                <h1 class="display-4 mb-3">Comprehensive Anti-Doping Services<br>For Clean Sport</h1>
+                <p class="lead">Empowering Athletes and Sports Organizations with Advanced Testing,<br>Education, and Support Services to Maintain Sport Integrity.</p>
+            </div>
+            
+            <div class="container">
+                <div class="row g-4">
+                    <!-- Testing & Analysis -->
+                    <div class="col-md-4">
+                        <div class="department-card position-relative">
+                            <img src="https://images.unsplash.com/photo-1583912086005-ac9abca6c9db?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-fluid rounded-4" alt="Testing & Analysis">
+                            <div class="card-overlay rounded-4">
+                                <h3>Testing & Analysis</h3>
+                                <p>State-of-the-art laboratory testing and comprehensive sample analysis.</p>
+                                <i class="bi bi-arrow-right position-absolute top-0 end-0 m-3"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education & Prevention -->
+                    <div class="col-md-4">
+                        <div class="department-card position-relative">
+                            <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-fluid rounded-4" alt="Education & Prevention">
+                            <div class="card-overlay rounded-4">
+                                <h3>Education & Prevention</h3>
+                                <p>Comprehensive training programs and resources for athletes and coaches.</p>
+                                <i class="bi bi-arrow-right position-absolute top-0 end-0 m-3"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Athlete Support -->
+                    <div class="col-md-4">
+                        <div class="department-card position-relative">
+                            <img src="https://images.unsplash.com/photo-1635357195764-b8eb177b992a?q=80&w=2058&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-fluid rounded-4" alt="Athlete Support">
+                            <div class="card-overlay rounded-4">
+                                <h3>Athlete Support</h3>
+                                <p>Guidance and assistance for athletes navigating anti-doping regulations.</p>
+                                <i class="bi bi-arrow-right position-absolute top-0 end-0 m-3"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Research & Development -->
+                    <div class="col-md-4">
+                        <div class="department-card position-relative">
+                            <img src="https://plus.unsplash.com/premium_photo-1661436558976-540ff4f4459f?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-fluid rounded-4" alt="Research & Development">
+                            <div class="card-overlay rounded-4">
+                                <h3>Research & Development</h3>
+                                <p>Advancing anti-doping science and detection methods.</p>
+                                <i class="bi bi-arrow-right position-absolute top-0 end-0 m-3"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Compliance & Reporting -->
+                    <div class="col-md-4">
+                        <div class="department-card position-relative">
+                            <img src="https://images.unsplash.com/photo-1562564055-71e051d33c19?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-fluid rounded-4" alt="Compliance & Reporting">
+                            <div class="card-overlay rounded-4">
+                                <h3>Compliance & Reporting</h3>
+                                <p>Ensuring adherence to international anti-doping standards.</p>
+                                <i class="bi bi-arrow-right position-absolute top-0 end-0 m-3"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Results Management -->
+                    <div class="col-md-4">
+                        <div class="department-card position-relative">
+                            <img src="https://images.unsplash.com/photo-1477013743164-ffc3a5e556da?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-fluid rounded-4" alt="Results Management">
+                            <div class="card-overlay rounded-4">
+                                <h3>Results Management</h3>
+                                <p>Professional handling of test results and appeals processes.</p>
+                                <i class="bi bi-arrow-right position-absolute top-0 end-0 m-3"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section3">
+            <div class="container text-center py-5">
+                <h1 class="display-4 mb-3">Testing Procedures & Guidelines</h1>
+                <p class="lead mb-5">Understanding the anti-doping testing process is crucial for athletes and sports organizations. Learn about our comprehensive testing protocols and procedures.</p>
+                
+                <div class="categories-scroll">
+                    <div class="d-flex justify-content-center flex-nowrap overflow-auto">
+                        <button class="btn btn-primary rounded-pill mx-2">All Procedures</button>
+                        <button class="btn btn-light rounded-pill mx-2">Sample Collection</button>
+                        <button class="btn btn-light rounded-pill mx-2">In-Competition</button>
+                        <button class="btn btn-light rounded-pill mx-2">Out-of-Competition</button>
+                        <button class="btn btn-light rounded-pill mx-2">Blood Testing</button>
+                        <button class="btn btn-light rounded-pill mx-2">Urine Testing</button>
+                        <button class="btn btn-light rounded-pill mx-2">Results Analysis</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container pb-5">
+                <!-- Swiper -->
+                <div class="swiper proceduresSwiper">
+                    <div class="swiper-wrapper">
+                        <!-- In-Competition Testing -->
+                        <div class="swiper-slide">
+                            <div class="procedure-card">
+                                <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?q=80&w=2070&auto=format&fit=crop" 
+                                     alt="In-Competition Testing" class="rounded-4 mb-3">
+                                <h3>In-Competition Testing</h3>
+                                <p class="description">Comprehensive testing procedures during sporting events to ensure fair competition.</p>
+                                <ul class="features">
+                                    <li>Immediate sample collection post-competition</li>
+                                    <li>Strict chain of custody protocols</li>
+                                    <li>Results within specified timeframes</li>
+                                </ul>
+                                <div class="price-section">
+                                    <span class="price">Contact for Pricing</span>
+                                    <button class="btn btn-dark rounded-pill">Learn More</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Out-of-Competition Testing -->
+                        <div class="swiper-slide">
+                            <div class="procedure-card">
+                                <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?q=80&w=2069&auto=format&fit=crop" 
+                                     alt="Out-of-Competition Testing" class="rounded-4 mb-3">
+                                <h3>Out-of-Competition Testing</h3>
+                                <p class="description">Random testing conducted outside of competitive events to maintain year-round compliance.</p>
+                                <ul class="features">
+                                    <li>No-notice testing approach</li>
+                                    <li>Athlete whereabouts monitoring</li>
+                                    <li>Flexible testing windows</li>
+                                </ul>
+                                <div class="price-section">
+                                    <span class="price">Contact for Pricing</span>
+                                    <button class="btn btn-dark rounded-pill">Learn More</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Blood Testing -->
+                        <div class="swiper-slide">
+                            <div class="procedure-card">
+                                <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?q=80&w=2070&auto=format&fit=crop" 
+                                     alt="Blood Testing" class="rounded-4 mb-3">
+                                <h3>Blood Testing</h3>
+                                <p class="description">Advanced blood sample analysis for detecting performance-enhancing substances.</p>
+                                <ul class="features">
+                                    <li>Biological passport profiling</li>
+                                    <li>Sterile collection protocols</li>
+                                    <li>Rapid processing timeframes</li>
+                                </ul>
+                                <div class="price-section">
+                                    <span class="price">Contact for Pricing</span>
+                                    <button class="btn btn-dark rounded-pill">Learn More</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Urine Testing -->
+                        <div class="swiper-slide">
+                            <div class="procedure-card">
+                                <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=2080&auto=format&fit=crop" 
+                                     alt="Urine Testing" class="rounded-4 mb-3">
+                                <h3>Urine Testing</h3>
+                                <p class="description">Standard urine sample collection and analysis for prohibited substances.</p>
+                                <ul class="features">
+                                    <li>Witnessed collection process</li>
+                                    <li>Tamper-evident sealing</li>
+                                    <li>Comprehensive screening panel</li>
+                                </ul>
+                                <div class="price-section">
+                                    <span class="price">Contact for Pricing</span>
+                                    <button class="btn btn-dark rounded-pill">Learn More</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Results Management -->
+                        <div class="swiper-slide">
+                            <div class="procedure-card">
+                                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop" 
+                                     alt="Results Management" class="rounded-4 mb-3">
+                                <h3>Results Management</h3>
+                                <p class="description">Professional handling and processing of test results with complete confidentiality.</p>
+                                <ul class="features">
+                                    <li>Secure data management</li>
+                                    <li>Confidential reporting</li>
+                                    <li>Appeals process support</li>
+                                </ul>
+                                <div class="price-section">
+                                    <span class="price">Contact for Pricing</span>
+                                    <button class="btn btn-dark rounded-pill">Learn More</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Target Testing -->
+                        <div class="swiper-slide">
+                            <div class="procedure-card">
+                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" 
+                                     alt="Target Testing" class="rounded-4 mb-3">
+                                <h3>Target Testing</h3>
+                                <p class="description">Strategic testing based on risk assessment and intelligence-based selection.</p>
+                                <ul class="features">
+                                    <li>Risk-based selection</li>
+                                    <li>Intelligence-led testing</li>
+                                    <li>Focused monitoring</li>
+                                </ul>
+                                <div class="price-section">
+                                    <span class="price">Contact for Pricing</span>
+                                    <button class="btn btn-dark rounded-pill">Learn More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+        <div class="step-track">
+            <div class="container py-5">
+                <div class="row align-items-center">
+                    <div class="col-lg-5">
+                        <h2 class="display-4 mb-4">Track Your Testing Process</h2>
+                        <p class="lead mb-4">Stay informed about your anti-doping test status through our mobile application. Monitor each step of the process in real-time.</p>
+                        
+                        <!-- Steps List -->
+                        <div class="steps-list">
+                            <div class="step-item active">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Sample Collection</h4>
+                                    <p>Initial testing sample collected and secured</p>
+                                </div>
+                                <div class="step-status">
+                                    <i class="bi bi-check-circle-fill text-success"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="step-item active">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Lab Processing</h4>
+                                    <p>Sample being analyzed in accredited laboratory</p>
+                                </div>
+                                <div class="step-status">
+                                    <i class="bi bi-check-circle-fill text-success"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="step-item current">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Analysis</h4>
+                                    <p>Detailed examination of test results</p>
+                                </div>
+                                <div class="step-status">
+                                    <div class="spinner-border text-primary" role="status">
+                                        <span class="visually-hidden">Loading...</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="step-item">
+                                <div class="step-number">4</div>
+                                <div class="step-content">
+                                    <h4>Results</h4>
+                                    <p>Final results review and notification</p>
+                                </div>
+                                <div class="step-status">
+                                    <i class="bi bi-circle text-muted"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- App Store Buttons -->
+                        <div class="mt-5">
+                            <button class="btn btn-dark me-3 rounded-pill">
+                                <i class="fab fa-apple me-2"></i>App Store
+                            </button>
+                            <button class="btn btn-dark rounded-pill">
+                                <i class="fab fa-google-play me-2"></i>Google Play
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Mobile UI -->
+                    <div class="col-lg-7">
+                        <div class="mobile-ui-container text-center">
+                            <div class="mobile-frame">
+                                <div class="mobile-screen">
+                                    <!-- Status Bar -->
+                                    <div class="status-bar d-flex justify-content-between align-items-center px-3 py-2">
+                                        <span>9:41</span>
+                                        <div>
+                                            <i class="bi bi-wifi"></i>
+                                            <i class="bi bi-battery-full ms-2"></i>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- App Content -->
+                                    <div class="app-content p-3">
+                                        <div class="test-status-card bg-white p-4 rounded-4 mb-4">
+                                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                                <h5 class="mb-0">Current Test Status</h5>
+                                                <span class="badge bg-primary rounded-pill">In Progress</span>
+                                            </div>
+                                            <div class="progress mb-3" style="height: 8px;">
+                                                <div class="progress-bar" role="progressbar" style="width: 75%"></div>
+                                            </div>
+                                            <small class="text-muted">Test ID: #AD-2024-0123</small>
+                                        </div>
+
+                                        <div class="timeline-view">
+                                            <!-- Timeline items will mirror the steps list -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section4">
+            <div class="container py-5">
+                <div class="row mb-4">
+                    <div class="col-12 text-center">
+                        <h1 class="display-4 mb-3">Latest Articles & Updates</h1>
+                        <p class="lead">Stay informed with the latest news, research, and developments in anti-doping.</p>
+                    </div>
+                </div>
+                
+                <div class="row g-4">
+                    <!-- Article 1 -->
+                    <div class="col-md-4">
+                        <div class="article-card">
+                            <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=2070&auto=format&fit=crop" 
+                                 alt="Article Image" 
+                                 class="img-fluid rounded-4 mb-3">
+                            <div class="article-content">
+                                <span class="badge bg-primary mb-2">Research</span>
+                                <h3>New Detection Methods in Anti-Doping</h3>
+                                <p class="text-muted">Breakthrough developments in testing methodology improve accuracy and reliability.</p>
+                                <div class="d-flex align-items-center">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" 
+                                         alt="Author" 
+                                         class="rounded-circle me-2" 
+                                         style="width: 40px; height: 40px;">
+                                    <div>
+                                        <p class="mb-0 fw-bold">Dr. James Wilson</p>
+                                        <small class="text-muted">Jan 15, 2024 · 8 min read</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Article 2 -->
+                    <div class="col-md-4">
+                        <div class="article-card">
+                            <img src="https://images.unsplash.com/photo-1599058917765-a780eda07a3e?q=80&w=2069&auto=format&fit=crop" 
+                                 alt="Article Image" 
+                                 class="img-fluid rounded-4 mb-3">
+                            <div class="article-content">
+                                <span class="badge bg-success mb-2">Education</span>
+                                <h3>Understanding the Athlete Biological Passport</h3>
+                                <p class="text-muted">A comprehensive guide to how the ABP helps maintain sport integrity.</p>
+                                <div class="d-flex align-items-center">
+                                    <img src="https://randomuser.me/api/portraits/women/44.jpg" 
+                                         alt="Author" 
+                                         class="rounded-circle me-2" 
+                                         style="width: 40px; height: 40px;">
+                                    <div>
+                                        <p class="mb-0 fw-bold">Sarah Chen</p>
+                                        <small class="text-muted">Jan 12, 2024 · 6 min read</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Article 3 -->
+                    <div class="col-md-4">
+                        <div class="article-card">
+                            <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=2036&auto=format&fit=crop" 
+                                 alt="Article Image" 
+                                 class="img-fluid rounded-4 mb-3">
+                            <div class="article-content">
+                                <span class="badge bg-warning mb-2">Updates</span>
+                                <h3>2024 Changes to the Prohibited List</h3>
+                                <p class="text-muted">Key updates and modifications to the WADA Prohibited List for 2024.</p>
+                                <div class="d-flex align-items-center">
+                                    <img src="https://randomuser.me/api/portraits/men/67.jpg" 
+                                         alt="Author" 
+                                         class="rounded-circle me-2" 
+                                         style="width: 40px; height: 40px;">
+                                    <div>
+                                        <p class="mb-0 fw-bold">Michael Brown</p>
+                                        <small class="text-muted">Jan 10, 2024 · 5 min read</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section5">
+            <div class="container py-5">
+                <div class="row mb-4">
+                    <div class="col-12 text-center">
+                        <h1 class="display-4 mb-3">Resources & Documents</h1>
+                        <p class="lead">Access essential anti-doping documentation, guidelines, and educational materials.</p>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Document 1 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="resource-card p-4 rounded-4 h-100">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="resource-icon me-3">
+                                    <i class="fas fa-file-pdf fs-2 text-danger"></i>
+                                </div>
+                                <div>
+                                    <h3 class="mb-0">2024 Prohibited List</h3>
+                                    <span class="text-muted">PDF • 2.4 MB</span>
+                                </div>
+                            </div>
+                            <p class="text-muted mb-4">Complete list of prohibited substances and methods in sports for 2024.</p>
+                            <a href="#" class="btn btn-outline-primary rounded-pill">
+                                <i class="fas fa-download me-2"></i>Download
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Document 2 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="resource-card p-4 rounded-4 h-100">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="resource-icon me-3">
+                                    <i class="fas fa-file-pdf fs-2 text-danger"></i>
+                                </div>
+                                <div>
+                                    <h3 class="mb-0">Testing Guidelines</h3>
+                                    <span class="text-muted">PDF • 1.8 MB</span>
+                                </div>
+                            </div>
+                            <p class="text-muted mb-4">Comprehensive guide to anti-doping testing procedures and protocols.</p>
+                            <a href="#" class="btn btn-outline-primary rounded-pill">
+                                <i class="fas fa-download me-2"></i>Download
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Document 3 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="resource-card p-4 rounded-4 h-100">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="resource-icon me-3">
+                                    <i class="fas fa-file-pdf fs-2 text-danger"></i>
+                                </div>
+                                <div>
+                                    <h3 class="mb-0">Athlete Guide</h3>
+                                    <span class="text-muted">PDF • 3.1 MB</span>
+                                </div>
+                            </div>
+                            <p class="text-muted mb-4">Essential information and guidelines for athletes regarding anti-doping.</p>
+                            <a href="#" class="btn btn-outline-primary rounded-pill">
+                                <i class="fas fa-download me-2"></i>Download
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Document 4 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="resource-card p-4 rounded-4 h-100">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="resource-icon me-3">
+                                    <i class="fas fa-file-pdf fs-2 text-danger"></i>
+                                </div>
+                                <div>
+                                    <h3 class="mb-0">Educational Materials</h3>
+                                    <span class="text-muted">PDF • 5.2 MB</span>
+                                </div>
+                            </div>
+                            <p class="text-muted mb-4">Training materials and educational resources for athletes and coaches.</p>
+                            <a href="#" class="btn btn-outline-primary rounded-pill">
+                                <i class="fas fa-download me-2"></i>Download
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Document 5 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="resource-card p-4 rounded-4 h-100">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="resource-icon me-3">
+                                    <i class="fas fa-file-pdf fs-2 text-danger"></i>
+                                </div>
+                                <div>
+                                    <h3 class="mb-0">Research Papers</h3>
+                                    <span class="text-muted">PDF • 4.7 MB</span>
+                                </div>
+                            </div>
+                            <p class="text-muted mb-4">Collection of latest research papers and scientific studies in anti-doping.</p>
+                            <a href="#" class="btn btn-outline-primary rounded-pill">
+                                <i class="fas fa-download me-2"></i>Download
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Document 6 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="resource-card p-4 rounded-4 h-100">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="resource-icon me-3">
+                                    <i class="fas fa-file-pdf fs-2 text-danger"></i>
+                                </div>
+                                <div>
+                                    <h3 class="mb-0">Annual Report</h3>
+                                    <span class="text-muted">PDF • 6.3 MB</span>
+                                </div>
+                            </div>
+                            <p class="text-muted mb-4">Comprehensive report on anti-doping activities and achievements.</p>
+                            <a href="#" class="btn btn-outline-primary rounded-pill">
+                                <i class="fas fa-download me-2"></i>Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#testing">Testing</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> contact@antidoping.com</li>
+                    <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 AntiDoping Platform. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Add Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

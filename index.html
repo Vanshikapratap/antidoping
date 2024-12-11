@@ -16,6 +16,7 @@
 
     <!-- Add Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 </head>
 <body>
     <!-- Navigation -->
@@ -25,37 +26,66 @@
                 <span>AntiDoping</span>
             </a>
 
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <div class="d-flex align-items-center">
+                <!-- Move language selector before toggle on mobile -->
+                <div class="nav-item dropdown d-lg-none me-2">
+                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle rounded-pill" type="button" id="languageSelectorMobile" data-bs-toggle="dropdown">
+                        <i class="bi bi-globe"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageSelectorMobile">
+                        <li><a class="dropdown-item" href="#" data-lang="en">English</a></li>
+                        <li><a class="dropdown-item" href="#" data-lang="es">Español</a></li>
+                        <!-- ... other languages ... -->
+                    </ul>
+                </div>
+                
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Home</a>
+                        <a class="nav-link active" href="./index.html" data-translate="home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Education</a>
+                        <a class="nav-link" href="./medicine.html" data-translate="medicine">Medicine</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Testing</a>
-                    </li>
+                        <a class="nav-link" href="./mentor.html" data-translate="mentor">Mentor Chat</a>
+                      </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Resources</a>
+                        <a class="nav-link" href="#" data-translate="resources">Resources</a>
                     </li>
                 </ul>
+                
+                <!-- Add Language Selector before login buttons -->
+                <div class="nav-item dropdown me-3">
+                    <button class="btn btn-outline-secondary dropdown-toggle rounded-pill" type="button" id="languageSelector" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-globe me-1"></i>
+                        <span class="current-lang">English</span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageSelector">
+                        <li><a class="dropdown-item" href="#" data-lang="en">English</a></li>
+                        <li><a class="dropdown-item" href="#" data-lang="es">Español</a></li>
+                        <li><a class="dropdown-item" href="#" data-lang="fr">Français</a></li>
+                        <li><a class="dropdown-item" href="#" data-lang="de">Deutsch</a></li>
+                        <li><a class="dropdown-item" href="#" data-lang="zh">中文</a></li>
+                    </ul>
+                </div>
                 
                 <!-- Move login button to navbar-nav on mobile -->
                 <div class="d-lg-none w-100 mt-3">
                     <button class="btn btn-primary rounded-pill px-4 w-100">
-                        Login <i class="bi bi-arrow-right ms-2"></i>
+                        <span data-translate="login">Login</span> <i class="bi bi-arrow-right ms-2"></i>
                     </button>
                 </div>
                 
                 <!-- Show login button only on desktop -->
                 <div class="d-none d-lg-block">
                     <button class="btn btn-primary rounded-pill px-4">
-                        Login <i class="bi bi-arrow-right ms-2"></i>
+                        <span data-translate="login">Login</span> <i class="bi bi-arrow-right ms-2"></i>
                     </button>
                 </div>
             </div>
@@ -65,9 +95,9 @@
     <!-- Main Content -->
     <main>
         <div class="video">
-            <div class="video-container position-relative" style="height: 100vh;">
+            <div class="video-container position-relative" style="height: 100vh; min-height: 400px;">
                 <!-- Video Background -->
-                <video class="w-100 h-100 object-fit-cover position-absolute top-0 start-0" autoplay muted loop>
+                <video class="w-100 h-100 object-fit-cover position-absolute top-0 start-0" autoplay muted loop playsinline>
                     <source src="./Assets/WhatsApp Video 2024-12-11 at 3.20.49 PM.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -76,18 +106,18 @@
                 <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center" 
                      style="background: rgba(0, 0, 0, 0.5);">
                     <div class="text-center text-white">
-                        <h1 class="display-2 fw-bold mb-4">Protecting Clean Sport</h1>
+                        <h1 class="display-2 fw-bold mb-4" data-translate="protectingCleanSport">Protecting Clean Sport</h1>
                         <p class="lead mb-4">Ensuring fair competition through rigorous testing and education</p>
                         <button class="btn btn-primary btn-lg rounded-pill px-5">
-                            Learn More <i class="bi bi-arrow-right ms-2"></i>
+                            <span data-translate="learnMore">Learn More</span> <i class="bi bi-arrow-right ms-2"></i>
                         </button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="section1">
+        <div class="section1 py-5">
             <div class="container">
-                <div class="row align-items-center">
+                <div class="row align-items-center gy-4">
                     <div class="col-md-6">
                         <!-- Left content -->
                         <div class="left-content">
@@ -116,7 +146,7 @@
             </div>
         </div>
         <div class="section2">
-            <div class="container text-center py-5" style="height: 40vh;">
+            <div class="container text-center py-5" style="min-height: 40vh;">
                 <h1 class="display-4 mb-3">Comprehensive Anti-Doping Services<br>For Clean Sport</h1>
                 <p class="lead">Empowering Athletes and Sports Organizations with Advanced Testing,<br>Education, and Support Services to Maintain Sport Integrity.</p>
             </div>
@@ -124,9 +154,11 @@
             <div class="container">
                 <div class="row g-4">
                     <!-- Testing & Analysis -->
-                    <div class="col-md-4">
-                        <div class="department-card position-relative">
-                            <img src="https://images.unsplash.com/photo-1583912086005-ac9abca6c9db?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-fluid rounded-4" alt="Testing & Analysis">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="department-card position-relative h-100">
+                            <img src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop" 
+                                 class="img-fluid rounded-4" 
+                                 alt="Laboratory scientist analyzing blood samples for doping test">
                             <div class="card-overlay rounded-4">
                                 <h3>Testing & Analysis</h3>
                                 <p>State-of-the-art laboratory testing and comprehensive sample analysis.</p>
@@ -136,9 +168,11 @@
                     </div>
 
                     <!-- Education & Prevention -->
-                    <div class="col-md-4">
-                        <div class="department-card position-relative">
-                            <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-fluid rounded-4" alt="Education & Prevention">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="department-card position-relative h-100">
+                            <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop" 
+                                 class="img-fluid rounded-4" 
+                                 alt="Anti-doping education seminar with athletes and coaches">
                             <div class="card-overlay rounded-4">
                                 <h3>Education & Prevention</h3>
                                 <p>Comprehensive training programs and resources for athletes and coaches.</p>
@@ -148,9 +182,11 @@
                     </div>
 
                     <!-- Athlete Support -->
-                    <div class="col-md-4">
-                        <div class="department-card position-relative">
-                            <img src="https://images.unsplash.com/photo-1635357195764-b8eb177b992a?q=80&w=2058&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-fluid rounded-4" alt="Athlete Support">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="department-card position-relative h-100">
+                            <img src="https://images.unsplash.com/photo-1551958219-acbc608c6377?auto=format&fit=crop" 
+                                 class="img-fluid rounded-4" 
+                                 alt="Sports medical professional consulting with athlete">
                             <div class="card-overlay rounded-4">
                                 <h3>Athlete Support</h3>
                                 <p>Guidance and assistance for athletes navigating anti-doping regulations.</p>
@@ -160,9 +196,11 @@
                     </div>
 
                     <!-- Research & Development -->
-                    <div class="col-md-4">
-                        <div class="department-card position-relative">
-                            <img src="https://plus.unsplash.com/premium_photo-1661436558976-540ff4f4459f?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-fluid rounded-4" alt="Research & Development">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="department-card position-relative h-100">
+                            <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop" 
+                                 class="img-fluid rounded-4" 
+                                 alt="Scientific research in anti-doping laboratory">
                             <div class="card-overlay rounded-4">
                                 <h3>Research & Development</h3>
                                 <p>Advancing anti-doping science and detection methods.</p>
@@ -172,9 +210,11 @@
                     </div>
 
                     <!-- Compliance & Reporting -->
-                    <div class="col-md-4">
-                        <div class="department-card position-relative">
-                            <img src="https://images.unsplash.com/photo-1562564055-71e051d33c19?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-fluid rounded-4" alt="Compliance & Reporting">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="department-card position-relative h-100">
+                            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop" 
+                                 class="img-fluid rounded-4" 
+                                 alt="Professional reviewing compliance documents">
                             <div class="card-overlay rounded-4">
                                 <h3>Compliance & Reporting</h3>
                                 <p>Ensuring adherence to international anti-doping standards.</p>
@@ -184,9 +224,11 @@
                     </div>
 
                     <!-- Results Management -->
-                    <div class="col-md-4">
-                        <div class="department-card position-relative">
-                            <img src="https://images.unsplash.com/photo-1477013743164-ffc3a5e556da?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-fluid rounded-4" alt="Results Management">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="department-card position-relative h-100">
+                            <img src="https://images.unsplash.com/photo-1590650153855-d9e808231d41?auto=format&fit=crop" 
+                                 class="img-fluid rounded-4" 
+                                 alt="Digital dashboard showing test results analysis">
                             <div class="card-overlay rounded-4">
                                 <h3>Results Management</h3>
                                 <p>Professional handling of test results and appeals processes.</p>
@@ -197,149 +239,174 @@
                 </div>
             </div>
         </div>
-        <div class="section3">
-            <div class="container text-center py-5">
-                <h1 class="display-4 mb-3">Testing Procedures & Guidelines</h1>
-                <p class="lead mb-5">Understanding the anti-doping testing process is crucial for athletes and sports organizations. Learn about our comprehensive testing protocols and procedures.</p>
-                
-                <div class="categories-scroll">
-                    <div class="d-flex justify-content-center flex-nowrap overflow-auto">
-                        <button class="btn btn-primary rounded-pill mx-2">All Procedures</button>
-                        <button class="btn btn-light rounded-pill mx-2">Sample Collection</button>
-                        <button class="btn btn-light rounded-pill mx-2">In-Competition</button>
-                        <button class="btn btn-light rounded-pill mx-2">Out-of-Competition</button>
-                        <button class="btn btn-light rounded-pill mx-2">Blood Testing</button>
-                        <button class="btn btn-light rounded-pill mx-2">Urine Testing</button>
-                        <button class="btn btn-light rounded-pill mx-2">Results Analysis</button>
+        <div class="testing-simulation py-5">
+            <div class="container">
+                <div class="row mb-4">
+                    <div class="col-12 text-center">
+                        <h1 class="display-4 mb-3">Doping Test Simulation</h1>
+                        <p class="lead">Experience a step-by-step walkthrough of the anti-doping testing process</p>
                     </div>
                 </div>
-            </div>
-            
-            <div class="container pb-5">
-                <!-- Swiper -->
-                <div class="swiper proceduresSwiper">
-                    <div class="swiper-wrapper">
-                        <!-- In-Competition Testing -->
-                        <div class="swiper-slide">
-                            <div class="procedure-card">
-                                <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?q=80&w=2070&auto=format&fit=crop" 
-                                     alt="In-Competition Testing" class="rounded-4 mb-3">
-                                <h3>In-Competition Testing</h3>
-                                <p class="description">Comprehensive testing procedures during sporting events to ensure fair competition.</p>
-                                <ul class="features">
-                                    <li>Immediate sample collection post-competition</li>
-                                    <li>Strict chain of custody protocols</li>
-                                    <li>Results within specified timeframes</li>
-                                </ul>
-                                <div class="price-section">
-                                    <span class="price">Contact for Pricing</span>
-                                    <button class="btn btn-dark rounded-pill">Learn More</button>
+
+                <div class="simulation-container bg-white rounded-4 p-4">
+                    <!-- Step Navigation -->
+                    <div class="step-navigation d-flex justify-content-between mb-4">
+                        <div class="step-indicator active" data-step="1">
+                            <div class="step-number">1</div>
+                            <span class="step-label">Notification</span>
+                        </div>
+                        <div class="step-indicator" data-step="2">
+                            <div class="step-number">2</div>
+                            <span class="step-label">Documentation</span>
+                        </div>
+                        <div class="step-indicator" data-step="3">
+                            <div class="step-number">3</div>
+                            <span class="step-label">Sample Collection</span>
+                        </div>
+                        <div class="step-indicator" data-step="4">
+                            <div class="step-number">4</div>
+                            <span class="step-label">Sealing</span>
+                        </div>
+                        <div class="step-indicator" data-step="5">
+                            <div class="step-number">5</div>
+                            <span class="step-label">Documentation</span>
+                        </div>
+                    </div>
+
+                    <!-- Simulation Content -->
+                    <div class="simulation-content">
+                        <!-- Step 1: Notification -->
+                        <div class="simulation-step active" data-step="1">
+                            <div class="row align-items-center">
+                                <div class="col-md-6">
+                                    <h3>Athlete Notification</h3>
+                                    <p>The testing process begins when a Doping Control Officer (DCO) notifies the athlete of their selection for testing.</p>
+                                    <ul class="simulation-details">
+                                        <li>Athlete is notified in person by the DCO</li>
+                                        <li>Rights and responsibilities are explained</li>
+                                        <li>Athlete must sign the notification form</li>
+                                        <li>Athlete must remain in direct observation</li>
+                                    </ul>
+                                    <div class="interactive-element">
+                                        <button class="btn btn-primary" onclick="signNotification()">Sign Notification Form</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="simulation-visual">
+                                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2070&auto=format&fit=crop" 
+                                             alt="Notification Process" 
+                                             class="img-fluid rounded-4">
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Out-of-Competition Testing -->
-                        <div class="swiper-slide">
-                            <div class="procedure-card">
-                                <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?q=80&w=2069&auto=format&fit=crop" 
-                                     alt="Out-of-Competition Testing" class="rounded-4 mb-3">
-                                <h3>Out-of-Competition Testing</h3>
-                                <p class="description">Random testing conducted outside of competitive events to maintain year-round compliance.</p>
-                                <ul class="features">
-                                    <li>No-notice testing approach</li>
-                                    <li>Athlete whereabouts monitoring</li>
-                                    <li>Flexible testing windows</li>
-                                </ul>
-                                <div class="price-section">
-                                    <span class="price">Contact for Pricing</span>
-                                    <button class="btn btn-dark rounded-pill">Learn More</button>
+                        <!-- Step 2: Documentation -->
+                        <div class="simulation-step" data-step="2" style="display: none;">
+                            <div class="row align-items-center">
+                                <div class="col-md-6">
+                                    <h3>Initial Documentation</h3>
+                                    <p>The athlete provides necessary documentation and declares any medications or supplements.</p>
+                                    <div class="form-simulation">
+                                        <div class="mb-3">
+                                            <label class="form-label">Recent Medications</label>
+                                            <input type="text" class="form-control" placeholder="Enter medications...">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Supplements</label>
+                                            <input type="text" class="form-control" placeholder="Enter supplements...">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="simulation-visual">
+                                        <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?q=80&w=1932&auto=format&fit=crop" 
+                                             alt="Documentation Process" 
+                                             class="img-fluid rounded-4">
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Blood Testing -->
-                        <div class="swiper-slide">
-                            <div class="procedure-card">
-                                <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?q=80&w=2070&auto=format&fit=crop" 
-                                     alt="Blood Testing" class="rounded-4 mb-3">
-                                <h3>Blood Testing</h3>
-                                <p class="description">Advanced blood sample analysis for detecting performance-enhancing substances.</p>
-                                <ul class="features">
-                                    <li>Biological passport profiling</li>
-                                    <li>Sterile collection protocols</li>
-                                    <li>Rapid processing timeframes</li>
-                                </ul>
-                                <div class="price-section">
-                                    <span class="price">Contact for Pricing</span>
-                                    <button class="btn btn-dark rounded-pill">Learn More</button>
+                        <!-- Step 3: Sample Collection -->
+                        <div class="simulation-step" data-step="3" style="display: none;">
+                            <div class="row align-items-center">
+                                <div class="col-md-6">
+                                    <h3>Sample Collection</h3>
+                                    <p>The athlete provides the required sample under direct observation of a same-gender DCO.</p>
+                                    <ul class="simulation-details">
+                                        <li>Selection of collection vessel</li>
+                                        <li>Minimum volume requirements explained</li>
+                                        <li>Direct observation protocol</li>
+                                        <li>Sample verification process</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="simulation-visual">
+                                        <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?q=80&w=2070&auto=format&fit=crop" 
+                                             alt="Sample Collection Process" 
+                                             class="img-fluid rounded-4">
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Urine Testing -->
-                        <div class="swiper-slide">
-                            <div class="procedure-card">
-                                <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=2080&auto=format&fit=crop" 
-                                     alt="Urine Testing" class="rounded-4 mb-3">
-                                <h3>Urine Testing</h3>
-                                <p class="description">Standard urine sample collection and analysis for prohibited substances.</p>
-                                <ul class="features">
-                                    <li>Witnessed collection process</li>
-                                    <li>Tamper-evident sealing</li>
-                                    <li>Comprehensive screening panel</li>
-                                </ul>
-                                <div class="price-section">
-                                    <span class="price">Contact for Pricing</span>
-                                    <button class="btn btn-dark rounded-pill">Learn More</button>
+                        <!-- Step 4: Sealing -->
+                        <div class="simulation-step" data-step="4" style="display: none;">
+                            <div class="row align-items-center">
+                                <div class="col-md-6">
+                                    <h3>Sample Sealing</h3>
+                                    <p>The sample is sealed in tamper-evident bottles using a unique coding system.</p>
+                                    <ul class="simulation-details">
+                                        <li>Verification of bottle numbers</li>
+                                        <li>Secure sealing process</li>
+                                        <li>Sample division (A and B samples)</li>
+                                        <li>Tamper-evident verification</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="simulation-visual">
+                                        <img src="https://images.unsplash.com/photo-1579165466741-7f35e4755660?q=80&w=2070&auto=format&fit=crop" 
+                                             alt="Sealing Process" 
+                                             class="img-fluid rounded-4">
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Results Management -->
-                        <div class="swiper-slide">
-                            <div class="procedure-card">
-                                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop" 
-                                     alt="Results Management" class="rounded-4 mb-3">
-                                <h3>Results Management</h3>
-                                <p class="description">Professional handling and processing of test results with complete confidentiality.</p>
-                                <ul class="features">
-                                    <li>Secure data management</li>
-                                    <li>Confidential reporting</li>
-                                    <li>Appeals process support</li>
-                                </ul>
-                                <div class="price-section">
-                                    <span class="price">Contact for Pricing</span>
-                                    <button class="btn btn-dark rounded-pill">Learn More</button>
+                        <!-- Step 5: Final Documentation -->
+                        <div class="simulation-step" data-step="5" style="display: none;">
+                            <div class="row align-items-center">
+                                <div class="col-md-6">
+                                    <h3>Final Documentation</h3>
+                                    <p>Complete the doping control form and verify all information.</p>
+                                    <ul class="simulation-details">
+                                        <li>Review all documented information</li>
+                                        <li>Verify sample codes</li>
+                                        <li>Sign final documentation</li>
+                                        <li>Receive athlete copy</li>
+                                    </ul>
                                 </div>
-                            </div>
-                        </div>
-
-                        <!-- Target Testing -->
-                        <div class="swiper-slide">
-                            <div class="procedure-card">
-                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" 
-                                     alt="Target Testing" class="rounded-4 mb-3">
-                                <h3>Target Testing</h3>
-                                <p class="description">Strategic testing based on risk assessment and intelligence-based selection.</p>
-                                <ul class="features">
-                                    <li>Risk-based selection</li>
-                                    <li>Intelligence-led testing</li>
-                                    <li>Focused monitoring</li>
-                                </ul>
-                                <div class="price-section">
-                                    <span class="price">Contact for Pricing</span>
-                                    <button class="btn btn-dark rounded-pill">Learn More</button>
+                                <div class="col-md-6">
+                                    <div class="simulation-visual">
+                                        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=2071&auto=format&fit=crop" 
+                                             alt="Final Documentation Process" 
+                                             class="img-fluid rounded-4">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
-                    
-                    <!-- Add Pagination -->
-                    <div class="swiper-pagination"></div>
+
+                    <!-- Navigation Buttons -->
+                    <div class="simulation-navigation mt-4">
+                        <button class="btn btn-outline-primary me-2" onclick="previousStep()" disabled>Previous</button>
+                        <button class="btn btn-primary" onclick="nextStep()">Next</button>
+                    </div>
                 </div>
             </div>
         </div>
+
         <div class="step-track">
             <div class="container py-5">
                 <div class="row align-items-center">
@@ -529,6 +596,423 @@
                 </div>
             </div>
         </div>
+        <!-- New Real-time News & Updates Section -->
+        <div class="real-time-updates bg-light py-5">
+            <div class="container">
+                <div class="row mb-4">
+                    <div class="col-12 text-center">
+                        <h1 class="display-4 mb-3">Real-Time Updates</h1>
+                        <p class="lead">Stay informed with live updates from the anti-doping community</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- Live Feed Column -->
+                    <div class="col-lg-8">
+                        <div class="live-feed-container bg-white rounded-4 p-4 mb-4">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <h3 class="mb-0">Live Feed</h3>
+                                <span class="badge bg-danger d-flex align-items-center">
+                                    <span class="pulse-dot me-2"></span> LIVE
+                                </span>
+                            </div>
+
+                            <!-- Live Updates List -->
+                            <div class="live-updates-list">
+                                <div class="update-item border-bottom pb-3 mb-3">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span class="badge bg-success">New Result</span>
+                                        <small class="text-muted">2 minutes ago</small>
+                                    </div>
+                                    <h5>Competition Testing Results Released</h5>
+                                    <p class="mb-0">Results from the International Championship have been processed and released.</p>
+                                </div>
+
+                                <div class="update-item border-bottom pb-3 mb-3">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span class="badge bg-primary">Announcement</span>
+                                        <small class="text-muted">15 minutes ago</small>
+                                    </div>
+                                    <h5>Updated Testing Protocol Implementation</h5>
+                                    <p class="mb-0">New testing protocols will be implemented starting next month.</p>
+                                </div>
+
+                                <div class="update-item border-bottom pb-3 mb-3">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span class="badge bg-warning">Alert</span>
+                                        <small class="text-muted">1 hour ago</small>
+                                    </div>
+                                    <h5>Substance Added to Monitoring Program</h5>
+                                    <p class="mb-0">WADA adds new substance to the 2024 monitoring program.</p>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-outline-primary w-100 mt-3">Load More Updates</button>
+                        </div>
+                    </div>
+
+                    <!-- Statistics & Quick Info Column -->
+                    <div class="col-lg-4">
+                        <!-- Today's Statistics -->
+                        <div class="stats-card bg-white rounded-4 p-4 mb-4">
+                            <h4 class="mb-4">Today's Statistics</h4>
+                            <div class="stat-item d-flex justify-content-between mb-3">
+                                <span>Tests Conducted</span>
+                                <span class="fw-bold">247</span>
+                            </div>
+                            <div class="stat-item d-flex justify-content-between mb-3">
+                                <span>Results Processed</span>
+                                <span class="fw-bold">183</span>
+                            </div>
+                            <div class="stat-item d-flex justify-content-between">
+                                <span>Active Cases</span>
+                                <span class="fw-bold">12</span>
+                            </div>
+                        </div>
+
+                        <!-- Upcoming Events -->
+                        <div class="upcoming-events bg-white rounded-4 p-4">
+                            <h4 class="mb-4">Upcoming Events</h4>
+                            <div class="event-item mb-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="event-date me-3 text-center">
+                                        <span class="d-block fw-bold">15</span>
+                                        <small>MAR</small>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-1">Anti-Doping Symposium</h6>
+                                        <small class="text-muted">Virtual Event</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="event-item mb-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="event-date me-3 text-center">
+                                        <span class="d-block fw-bold">22</span>
+                                        <small>MAR</small>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-1">Athlete Workshop</h6>
+                                        <small class="text-muted">London, UK</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Local Events Section -->
+        <div class="local-events py-5">
+            <div class="container">
+                <div class="row mb-4">
+                    <div class="col-12 text-center">
+                        <h1 class="display-4 mb-3">Local Events & Training</h1>
+                        <p class="lead">Stay connected with anti-doping events in your area</p>
+                    </div>
+                </div>
+
+                <!-- Location Selector -->
+                <div class="row justify-content-center mb-5">
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <span class="input-group-text bg-white border-end-0">
+                                <i class="bi bi-geo-alt"></i>
+                            </span>
+                            <input type="text" class="form-control border-start-0" placeholder="Enter your location">
+                            <button class="btn btn-primary rounded-end">Find Events</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Events Grid -->
+                <div class="row g-4">
+                    <!-- Upcoming Seminar -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="event-card bg-white rounded-4 overflow-hidden">
+                            <div class="event-banner position-relative">
+                                <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2" 
+                                     alt="Event Image" 
+                                     class="img-fluid">
+                                <div class="event-date position-absolute top-0 end-0 m-3 bg-primary text-white p-2 rounded-3 text-center">
+                                    <strong class="d-block">15</strong>
+                                    <span>MAR</span>
+                                </div>
+                                <span class="badge bg-success position-absolute bottom-0 start-0 m-3">In-Person</span>
+                            </div>
+                            <div class="event-details p-4">
+                                <h4>Anti-Doping Compliance Workshop</h4>
+                                <p class="text-muted mb-3">Comprehensive training on latest compliance requirements and best practices.</p>
+                                <div class="event-info">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="bi bi-clock me-2"></i>
+                                        <span>9:00 AM - 4:00 PM</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="bi bi-geo-alt me-2"></i>
+                                        <span>Sports Complex, Downtown</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <i class="bi bi-person me-2"></i>
+                                        <span>45 spots remaining</span>
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <button class="btn btn-primary rounded-pill w-100">Register Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Online Webinar -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="event-card bg-white rounded-4 overflow-hidden">
+                            <div class="event-banner position-relative">
+                                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3" 
+                                     alt="Event Image" 
+                                     class="img-fluid">
+                                <div class="event-date position-absolute top-0 end-0 m-3 bg-primary text-white p-2 rounded-3 text-center">
+                                    <strong class="d-block">22</strong>
+                                    <span>MAR</span>
+                                </div>
+                                <span class="badge bg-info position-absolute bottom-0 start-0 m-3">Webinar</span>
+                            </div>
+                            <div class="event-details p-4">
+                                <h4>Understanding the 2024 Prohibited List</h4>
+                                <p class="text-muted mb-3">Online session covering changes and updates to the prohibited substances list.</p>
+                                <div class="event-info">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="bi bi-clock me-2"></i>
+                                        <span>2:00 PM - 3:30 PM</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="bi bi-laptop me-2"></i>
+                                        <span>Zoom Meeting</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <i class="bi bi-person me-2"></i>
+                                        <span>Unlimited spots</span>
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <button class="btn btn-primary rounded-pill w-100">Join Webinar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Training Session -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="event-card bg-white rounded-4 overflow-hidden">
+                            <div class="event-banner position-relative">
+                                <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4" 
+                                     alt="Event Image" 
+                                     class="img-fluid">
+                                <div class="event-date position-absolute top-0 end-0 m-3 bg-primary text-white p-2 rounded-3 text-center">
+                                    <strong class="d-block">28</strong>
+                                    <span>MAR</span>
+                                </div>
+                                <span class="badge bg-warning position-absolute bottom-0 start-0 m-3">Hybrid</span>
+                            </div>
+                            <div class="event-details p-4">
+                                <h4>Athletes' Rights and Responsibilities</h4>
+                                <p class="text-muted mb-3">Interactive session on understanding your rights during testing procedures.</p>
+                                <div class="event-info">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="bi bi-clock me-2"></i>
+                                        <span>10:00 AM - 12:00 PM</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="bi bi-geo-alt me-2"></i>
+                                        <span>Multiple Locations + Online</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <i class="bi bi-person me-2"></i>
+                                        <span>30 in-person spots left</span>
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <button class="btn btn-primary rounded-pill w-100">Register Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Calendar View Toggle -->
+                <div class="text-center mt-5">
+                    <button class="btn btn-outline-primary rounded-pill px-4">
+                        <i class="bi bi-calendar3 me-2"></i>View Full Calendar
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="forums py-5">
+            <div class="container">
+                <div class="row mb-4">
+                    <div class="col-12 text-center">
+                        <h1 class="display-4 mb-3">Athlete Forums</h1>
+                        <p class="lead">Join the conversation with fellow athletes and anti-doping experts</p>
+                    </div>
+                </div>
+
+                <!-- Forum Categories -->
+                <div class="row g-4 mb-5">
+                    <!-- General Discussion -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="forum-category-card bg-white rounded-4 p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-chat-dots fs-4 text-primary me-3"></i>
+                                    <h4 class="mb-0">General Discussion</h4>
+                        </div>
+                                <span class="badge bg-light text-dark">125 topics</span>
+                            </div>
+                            <p class="text-muted mb-3">Open discussions about anti-doping, sports, and athlete experiences.</p>
+                            <div class="latest-post p-3 bg-light rounded-3">
+                                <small class="d-block text-muted mb-1">Latest Post</small>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="text-truncate">Tips for staying compliant during travel</span>
+                                    <small class="text-muted ms-2">2m ago</small>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+
+                    <!-- Rules & Regulations -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="forum-category-card bg-white rounded-4 p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-book fs-4 text-success me-3"></i>
+                                    <h4 class="mb-0">Rules & Regulations</h4>
+                                </div>
+                                <span class="badge bg-light text-dark">89 topics</span>
+                            </div>
+                            <p class="text-muted mb-3">Discussions about anti-doping rules, updates, and compliance.</p>
+                            <div class="latest-post p-3 bg-light rounded-3">
+                                <small class="d-block text-muted mb-1">Latest Post</small>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="text-truncate">2024 Updates to Prohibited List</span>
+                                    <small class="text-muted ms-2">1h ago</small>
+                                    </div>
+                                    </div>
+                        </div>
+                    </div>
+
+                    <!-- Support & Help -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="forum-category-card bg-white rounded-4 p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <div class="d-flex align-items-center">
+                                    <i class="bi bi-question-circle fs-4 text-warning me-3"></i>
+                                    <h4 class="mb-0">Support & Help</h4>
+                                    </div>
+                                <span class="badge bg-light text-dark">234 topics</span>
+                                </div>
+                            <p class="text-muted mb-3">Get help with testing procedures, documentation, and more.</p>
+                            <div class="latest-post p-3 bg-light rounded-3">
+                                <small class="d-block text-muted mb-1">Latest Post</small>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="text-truncate">How to update whereabouts info?</span>
+                                    <small class="text-muted ms-2">30m ago</small>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <!-- Recent Discussions -->
+                <div class="recent-discussions bg-white rounded-4 p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h3>Recent Discussions</h3>
+                        <button class="btn btn-primary rounded-pill">Start New Topic</button>
+                                </div>
+
+                    <!-- Discussion Items -->
+                    <div class="discussion-list">
+                        <!-- Discussion 1 -->
+                        <div class="discussion-item p-3 border-bottom">
+                            <div class="d-flex">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" 
+                                     alt="User Avatar" 
+                                     class="rounded-circle me-3"
+                                     style="width: 48px; height: 48px;">
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <h5 class="mb-0">Tips for staying compliant during travel</h5>
+                                        <span class="badge bg-primary">General</span>
+                            </div>
+                                    <p class="text-muted mb-2">Sharing my experience and best practices for maintaining compliance while traveling internationally...</p>
+                                    <div class="d-flex align-items-center">
+                                        <small class="text-muted me-3">By John Doe</small>
+                                        <small class="text-muted me-3">2m ago</small>
+                                        <small class="text-muted me-3"><i class="bi bi-chat-dots me-1"></i>23 replies</small>
+                                        <small class="text-muted"><i class="bi bi-eye me-1"></i>156 views</small>
+                                    </div>
+                                    </div>
+                            </div>
+                        </div>
+
+                        <!-- Discussion 2 -->
+                        <div class="discussion-item p-3 border-bottom">
+                            <div class="d-flex">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" 
+                                     alt="User Avatar" 
+                                     class="rounded-circle me-3"
+                                     style="width: 48px; height: 48px;">
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <h5 class="mb-0">2024 Updates to Prohibited List</h5>
+                                        <span class="badge bg-success">Rules</span>
+                                    </div>
+                                    <p class="text-muted mb-2">Important changes to note in the 2024 Prohibited List and how they might affect athletes...</p>
+                                    <div class="d-flex align-items-center">
+                                        <small class="text-muted me-3">By Sarah Chen</small>
+                                        <small class="text-muted me-3">1h ago</small>
+                                        <small class="text-muted me-3"><i class="bi bi-chat-dots me-1"></i>45 replies</small>
+                                        <small class="text-muted"><i class="bi bi-eye me-1"></i>289 views</small>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+
+                        <!-- Discussion 3 -->
+                        <div class="discussion-item p-3">
+                            <div class="d-flex">
+                                <img src="https://randomuser.me/api/portraits/women/68.jpg" 
+                                     alt="User Avatar" 
+                                     class="rounded-circle me-3"
+                                     style="width: 48px; height: 48px;">
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <h5 class="mb-0">How to update whereabouts info?</h5>
+                                        <span class="badge bg-warning">Support</span>
+                                    </div>
+                                    <p class="text-muted mb-2">Need help updating my whereabouts information in the system. The new interface is a bit confusing...</p>
+                                    <div class="d-flex align-items-center">
+                                        <small class="text-muted me-3">By Emma Wilson</small>
+                                        <small class="text-muted me-3">30m ago</small>
+                                        <small class="text-muted me-3"><i class="bi bi-chat-dots me-1"></i>12 replies</small>
+                                        <small class="text-muted"><i class="bi bi-eye me-1"></i>78 views</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Load More Button -->
+                    <div class="text-center mt-4">
+                        <button class="btn btn-outline-primary rounded-pill px-4">
+                            Load More Discussions
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="section5">
             <div class="container py-5">
                 <div class="row mb-4">
@@ -549,14 +1033,14 @@
                                 <div>
                                     <h3 class="mb-0">2024 Prohibited List</h3>
                                     <span class="text-muted">PDF • 2.4 MB</span>
-                                </div>
                             </div>
+                                    </div>
                             <p class="text-muted mb-4">Complete list of prohibited substances and methods in sports for 2024.</p>
                             <a href="#" class="btn btn-outline-primary rounded-pill">
                                 <i class="fas fa-download me-2"></i>Download
                             </a>
-                        </div>
-                    </div>
+                                    </div>
+                                    </div>
 
                     <!-- Document 2 -->
                     <div class="col-md-6 col-lg-4">
@@ -593,8 +1077,8 @@
                             <a href="#" class="btn btn-outline-primary rounded-pill">
                                 <i class="fas fa-download me-2"></i>Download
                             </a>
-                        </div>
                     </div>
+                </div>
 
                     <!-- Document 4 -->
                     <div class="col-md-6 col-lg-4">
@@ -602,7 +1086,7 @@
                             <div class="d-flex align-items-center mb-3">
                                 <div class="resource-icon me-3">
                                     <i class="fas fa-file-pdf fs-2 text-danger"></i>
-                                </div>
+                </div>
                                 <div>
                                     <h3 class="mb-0">Educational Materials</h3>
                                     <span class="text-muted">PDF • 5.2 MB</span>
@@ -612,8 +1096,8 @@
                             <a href="#" class="btn btn-outline-primary rounded-pill">
                                 <i class="fas fa-download me-2"></i>Download
                             </a>
-                        </div>
-                    </div>
+            </div>
+        </div>
 
                     <!-- Document 5 -->
                     <div class="col-md-6 col-lg-4">
@@ -655,6 +1139,259 @@
                 </div>
             </div>
         </div>
+
+        <!-- Offline Access & Sync Section -->
+        <div class="offline-sync-section py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h2 class="display-4 mb-4">Access Anywhere, Anytime</h2>
+                        <p class="lead mb-4">Stay connected to essential anti-doping resources even when offline. Our platform ensures seamless synchronization across all your devices.</p>
+                        
+                        <!-- Sync Status Card -->
+                        <div class="sync-status-card bg-white rounded-4 p-4 mb-4">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h5 class="mb-0">Sync Status</h5>
+                                <span class="badge bg-success"><i class="bi bi-check-circle me-1"></i>Up to date</span>
+                            </div>
+                            <div class="sync-details">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Last synced</span>
+                                    <span class="text-muted">2 minutes ago</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Storage used</span>
+                                    <span class="text-muted">234 MB of 1 GB</span>
+                                </div>
+                                <div class="progress" style="height: 6px;">
+                                    <div class="progress-bar" role="progressbar" style="width: 23%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Feature List -->
+                        <div class="offline-features">
+                            <div class="feature-item d-flex align-items-center mb-3">
+                                <div class="feature-icon bg-primary bg-opacity-10 p-3 rounded-circle me-3">
+                                    <i class="bi bi-cloud-download text-primary"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-1">Offline Document Access</h5>
+                                    <p class="text-muted mb-0">Download and access important documents without internet connection</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-item d-flex align-items-center mb-3">
+                                <div class="feature-icon bg-success bg-opacity-10 p-3 rounded-circle me-3">
+                                    <i class="bi bi-arrow-repeat text-success"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-1">Automatic Sync</h5>
+                                    <p class="text-muted mb-0">Changes automatically sync across devices when online</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-item d-flex align-items-center">
+                                <div class="feature-icon bg-warning bg-opacity-10 p-3 rounded-circle me-3">
+                                    <i class="bi bi-shield-check text-warning"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-1">Secure Data Storage</h5>
+                                    <p class="text-muted mb-0">End-to-end encryption for all your stored data</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <!-- Device Sync Illustration -->
+                        <div class="device-sync-visual position-relative mt-5 mt-lg-0">
+                            <div class="device-container text-center">
+                                <!-- Desktop Device -->
+                                <div class="desktop-device bg-white rounded-4 p-3 shadow-sm mb-4">
+                                    <div class="device-header d-flex align-items-center mb-3">
+                                        <div class="browser-dots">
+                                            <span class="dot bg-danger"></span>
+                                            <span class="dot bg-warning"></span>
+                                            <span class="dot bg-success"></span>
+                                        </div>
+                                    </div>
+                                    <div class="device-content bg-light rounded p-3">
+                                        <div class="sync-animation">
+                                            <i class="bi bi-arrow-repeat fs-1 text-primary"></i>
+                                            <div class="sync-pulse"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Mobile Devices -->
+                                <div class="d-flex justify-content-center gap-4">
+                                    <div class="mobile-device bg-white rounded-4 p-2 shadow-sm">
+                                        <div class="device-header text-center mb-2">
+                                            <div class="notch bg-dark mx-auto"></div>
+                                        </div>
+                                        <div class="device-content bg-light rounded p-2">
+                                            <div class="sync-indicator">
+                                                <i class="bi bi-check-circle-fill text-success"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tablet-device bg-white rounded-4 p-2 shadow-sm">
+                                        <div class="device-content bg-light rounded p-2">
+                                            <div class="sync-indicator">
+                                                <i class="bi bi-check-circle-fill text-success"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Floating Sync Elements -->
+                            <div class="floating-sync-elements">
+                                <div class="sync-element position-absolute">
+                                    <i class="bi bi-file-pdf text-danger"></i>
+                                </div>
+                                <div class="sync-element position-absolute">
+                                    <i class="bi bi-image text-primary"></i>
+                                </div>
+                                <div class="sync-element position-absolute">
+                                    <i class="bi bi-file-text text-success"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Download App Section -->
+                <div class="download-app text-center mt-5">
+                    <h4 class="mb-4">Download Our App for Offline Access</h4>
+                    <div class="d-flex justify-content-center gap-3">
+                        <button class="btn btn-dark rounded-pill px-4">
+                            <i class="fab fa-apple me-2"></i>App Store
+                        </button>
+                        <button class="btn btn-dark rounded-pill px-4">
+                            <i class="fab fa-google-play me-2"></i>Google Play
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz Section -->
+        <div class="quiz-section py-5 bg-light">
+            <div class="container">
+                <div class="row mb-4">
+                    <div class="col-12 text-center">
+                        <h1 class="display-4 mb-3">Test Your Knowledge</h1>
+                        <p class="lead">Challenge yourself with our anti-doping quiz and enhance your understanding</p>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="quiz-container bg-white rounded-4 p-4">
+                            <!-- Quiz Progress -->
+                            <div class="progress mb-4" style="height: 8px;">
+                                <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+
+                            <!-- Quiz Content -->
+                            <div class="quiz-content">
+                                <div class="question-container text-center mb-4">
+                                    <span class="badge bg-primary mb-3">Question 1/5</span>
+                                    <h3 class="question-text mb-4">Which of the following is NOT a type of anti-doping violation?</h3>
+                                </div>
+
+                                <!-- Answer Options -->
+                                <div class="answers-container">
+                                    <div class="answer-option mb-3">
+                                        <button class="btn btn-outline-primary w-100 text-start rounded-pill p-3" data-answer="a">
+                                            <span class="option-letter me-3">A</span>
+                                            Presence of a prohibited substance
+                                        </button>
+                                    </div>
+                                    <div class="answer-option mb-3">
+                                        <button class="btn btn-outline-primary w-100 text-start rounded-pill p-3" data-answer="b">
+                                            <span class="option-letter me-3">B</span>
+                                            Use or attempted use of a prohibited substance
+                                        </button>
+                                    </div>
+                                    <div class="answer-option mb-3">
+                                        <button class="btn btn-outline-primary w-100 text-start rounded-pill p-3" data-answer="c">
+                                            <span class="option-letter me-3">C</span>
+                                            Taking supplements recommended by a coach
+                                        </button>
+                                    </div>
+                                    <div class="answer-option mb-3">
+                                        <button class="btn btn-outline-primary w-100 text-start rounded-pill p-3" data-answer="d">
+                                            <span class="option-letter me-3">D</span>
+                                            Tampering with doping control
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Navigation Buttons -->
+                                <div class="quiz-navigation d-flex justify-content-between align-items-center mt-4">
+                                    <button class="btn btn-outline-primary rounded-pill px-4" disabled>
+                                        <i class="bi bi-arrow-left me-2"></i>Previous
+                                    </button>
+                                    <button class="btn btn-primary rounded-pill px-4">
+                                        Next<i class="bi bi-arrow-right ms-2"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Quiz Results (Initially Hidden) -->
+                            <div class="quiz-results text-center" style="display: none;">
+                                <div class="result-circle mb-4">
+                                    <svg class="progress-ring" width="200" height="200">
+                                        <circle class="progress-ring-circle" stroke="#007bff" stroke-width="8" fill="transparent" r="90" cx="100" cy="100"/>
+                                    </svg>
+                                    <div class="score-text">
+                                        <h2 class="score mb-0">80%</h2>
+                                        <p class="text-muted">Score</p>
+                                    </div>
+                                </div>
+                                <h3 class="mb-3">Great job!</h3>
+                                <p class="text-muted mb-4">You've completed the quiz. Want to learn more?</p>
+                                <div class="d-flex justify-content-center gap-3">
+                                    <button class="btn btn-primary rounded-pill px-4">Review Answers</button>
+                                    <button class="btn btn-outline-primary rounded-pill px-4">Try Again</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quiz Info Cards -->
+                        <div class="row g-4 mt-4">
+                            <div class="col-md-4">
+                                <div class="info-card bg-white rounded-4 p-3 text-center">
+                                    <i class="bi bi-clock fs-1 text-primary mb-2"></i>
+                                    <h5>5 Minutes</h5>
+                                    <p class="text-muted mb-0">Average completion time</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="info-card bg-white rounded-4 p-3 text-center">
+                                    <i class="bi bi-question-circle fs-1 text-primary mb-2"></i>
+                                    <h5>5 Questions</h5>
+                                    <p class="text-muted mb-0">Test your knowledge</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="info-card bg-white rounded-4 p-3 text-center">
+                                    <i class="bi bi-trophy fs-1 text-primary mb-2"></i>
+                                    <h5>Certificate</h5>
+                                    <p class="text-muted mb-0">Upon completion</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testing Process Simulation Section -->
+       
     </main>
 
     <!-- Footer -->
@@ -693,5 +1430,6 @@
     <!-- Add Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="app.js"></script>
+    <script src="translation.js"></script>
 </body>
 </html>
